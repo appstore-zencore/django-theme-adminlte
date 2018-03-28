@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>{%load staticfiles %}
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+{% endblock %}
+{% block extra-meta %}{% endblock %}
+    <title>{% block title %}{{title}}{% endblock %}</title>
+{% block style %}
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "fontawesome/css/fontawesome-all.min.css" %}">
+    <link rel="stylesheet" href="{% static "ionicons/css/ionicons.min.css" %}">
+    <link rel="stylesheet" href="{% static "adminlte/css/AdminLTE.min.css" %}">
+    <link rel="stylesheet" href="{% static "adminlte/css/skins/_all-skins.min.css" %}">
+    <link rel="stylesheet" href="{% static "django_theme_adminlte/adminlte-fix.css" %}">
+    <!--[if lt IE 9]>
+    <script src="{% static "html5shiv/html5shiv.min.js" %}"></script>
+    <script src="{% static "respond/respond.min.js" %}"></script>
+    <![endif]-->
+{% endblock %}
+{% block extra-style %}{% endblock %}
+</head>
+<body class="{% block body-class %}hold-transition skin-blue sidebar-mini{% endblock %}">
+{% block wrapper %}
+<div class="wrapper">
+    {% block header %}
+    <header class="main-header">
+        {% block logo %}
+        <a href="#" class="logo">
+            <span class="logo-mini"><b>ZEN</b></span>
+            <span class="logo-lg"><b>ZEN</b>CORE</span>
+        </a>
+        {% endblock %}
+        {% block navbar %}
+        <nav class="navbar navbar-static-top">
+            {% block sidebar-toggle %}
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <i class="fa fa-bars"></i>
+            </a>
+            {% endblock %}
+            {% block navbar-custom-menu %}
+            <div class="navbar-custom-menu">
+                {% block navbar-nav %}
+                <ul class="nav navbar-nav">
+                </ul>
+                {% endblock %}
+            </div>
+            {% endblock %}
+        </nav>
+        {% endblock %}
+    </header>
+    {% endblock %}
+    {% block sidebar %}
+    <ul class="sidebar-menu" data-widget="tree">
+    </ul>
+    {% endblock %}
+    {% block content-wrapper %}
+    <div class="content-wrapper">
+        {% block content-header %}<section class="content-header"></section>{% endblock %}
+        {% block content %}<section class="content"></section>{% endblock %}
+    </div>
+    {% endblock %}
+    {% block footer %}
+    <footer class="main-footer no-print">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.4.0
+        </div>
+        <strong>Copyright &copy; 2018 <a href="http://zencore.cn">zencore.cn</a>.</strong> All rights reserved.
+    </footer>
+    {% endblock %}
+</div>
+{% endblock %}
+{% block script %}
+<script src="{% static "jquery3/jquery.min.js" %}"></script>
+<script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+<script src="{% static "adminlte/js/adminlte.min.js" %}"></script>
+<script>
+    $(document).ready(function () {
+        $('.sidebar-menu').tree()
+    })
+</script>
+{% endblock %}
+{% block extra-script %}{% endblock %}
+</body>
+</html>
