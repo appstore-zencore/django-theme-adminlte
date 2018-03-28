@@ -1,0 +1,7 @@
+django
+django-static-adminlte
+django-static-bootstrap
+django-static-jquery3
+django-static-fontawesome
+django-static-ionicons
+django-static-html5shiv
