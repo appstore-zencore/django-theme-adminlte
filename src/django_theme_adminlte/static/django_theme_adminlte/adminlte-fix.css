@@ -1,0 +1,4 @@
+.main-header .sidebar-toggle::before{
+    content: none;
+    font-family: inherit !important;
+}
