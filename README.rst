@@ -16,6 +16,8 @@ Install
 Settings
 --------
 
+::
+
     INSTALLED_APPS = [
         ...
         "django_static_adminlte",
