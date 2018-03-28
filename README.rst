@@ -27,7 +27,7 @@ Settings
         'django_static_ionicons',
         'django_static_html5shiv',
         'django_static_respond',
-        'django-theme-adminlte'
+        'django_theme_adminlte'
         ...
     ]
 
