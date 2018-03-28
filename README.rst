@@ -20,13 +20,14 @@ Settings
 
     INSTALLED_APPS = [
         ...
-        "django_static_adminlte",
-        "django_static_bootstrap",
-        "django_static_jquery3",
-        "django_static_fontawesome",
-        "django_static_ionicons",
-        "django_static_html5shiv",
-        "django_static_respond",
+        'django_static_adminlte',
+        'django_static_bootstrap',
+        'django_static_jquery3',
+        'django_static_fontawesome',
+        'django_static_ionicons',
+        'django_static_html5shiv',
+        'django_static_respond',
+        'django-theme-adminlte'
         ...
     ]
 
