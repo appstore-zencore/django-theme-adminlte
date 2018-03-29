@@ -27,7 +27,20 @@ Settings
         'django_static_ionicons',
         'django_static_html5shiv',
         'django_static_respond',
-        'django_theme_adminlte'
+        'django_theme_adminlte',
         ...
     ]
+
+Create new template based on adminlte
+-------------------------------------
+
+::
+
+    {% extends "django_theme_adminlte/base.html" %}
+
+    {% block content %}
+    <section class="content">
+        <p class="well">This is a simple page.</p>
+    </section>
+    {% endblock %}
 
