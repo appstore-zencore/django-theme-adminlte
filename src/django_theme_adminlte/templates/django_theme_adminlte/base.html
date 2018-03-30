@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static "ionicons/css/ionicons.min.css" %}">
     <link rel="stylesheet" href="{% static "adminlte/css/AdminLTE.min.css" %}">
     <link rel="stylesheet" href="{% static "adminlte/css/skins/_all-skins.min.css" %}">
-    <link rel="stylesheet" href="{% static "django_theme_adminlte/adminlte-fix.css" %}">
+    <link rel="stylesheet" href="{% static "django_theme_adminlte/css/adminlte-fix.css" %}">
     <!--[if lt IE 9]>
     <script src="{% static "html5shiv/html5shiv.min.js" %}"></script>
     <script src="{% static "respond/respond.min.js" %}"></script>
@@ -44,6 +44,7 @@
             <div class="navbar-custom-menu">
                 {% block navbar-nav %}
                 <ul class="nav navbar-nav">
+                    {% block header-user %}{% include "django_theme_adminlte/widgets/header-user.html" %}{% endblock %}
                 </ul>
                 {% endblock %}
             </div>

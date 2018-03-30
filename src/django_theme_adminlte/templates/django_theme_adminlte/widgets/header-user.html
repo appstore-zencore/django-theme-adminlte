@@ -1,0 +1,46 @@
+{% load staticfiles %}
+{% load i18n %}
+
+{% if request.user.pk %}
+<li class="dropdown user user-menu">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <img src="{% static "django_theme_adminlte/img/default-user.jpg" %}" class="user-image" alt="User Image">
+        <span class="hidden-xs">{{request.user}}</span>
+    </a>
+    <ul class="dropdown-menu">
+        <!-- User image -->
+        <li class="user-header">
+        <img src="{% static "django_theme_adminlte/img/default-user.jpg" %}" class="img-circle" alt="User Image">
+        <p>
+            {{request.user.username}}<br />
+            {{request.user.email}}
+            <small>{% blocktrans with date_joined=request.user.date_joined %}Member since {{date_joined}}{% endblocktrans %}</small>
+        </p>
+        </li>
+        <!-- Menu Body -->
+        <li class="user-body">
+        <div class="row">
+            <div class="col-xs-4 text-center">
+            <a href="#">Followers</a>
+            </div>
+            <div class="col-xs-4 text-center">
+            <a href="#">Sales</a>
+            </div>
+            <div class="col-xs-4 text-center">
+            <a href="#">Friends</a>
+            </div>
+        </div>
+        <!-- /.row -->
+        </li>
+        <!-- Menu Footer-->
+        <li class="user-footer">
+        <div class="pull-left">
+            <a href="#" class="btn btn-default btn-flat">{% trans "Profile" %}</a>
+        </div>
+        <div class="pull-right">
+            <a href="#" class="btn btn-default btn-flat">{% trans "Sign out" %}</a>
+        </div>
+        </li>
+    </ul>
+</li>
+{% endif %}
