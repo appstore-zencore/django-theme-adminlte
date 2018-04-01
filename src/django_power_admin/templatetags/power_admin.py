@@ -1,7 +1,6 @@
 from django import template
-from django.conf import settings
 from django.template.loader import render_to_string
-
+from django_power_admin import settings
 
 register = template.Library()
 
@@ -17,3 +16,8 @@ def nice_name(user, formatter=None):
         ).strip()
     name = name or user.username
     return name
+
+
+@register.simple_tag
+def user_information():
+    pass

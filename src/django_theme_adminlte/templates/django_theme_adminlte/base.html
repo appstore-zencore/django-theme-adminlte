@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 {% endblock %}
 {% block extra-meta %}{% endblock %}
-    <title>{% block title %}{{title}}{% endblock %}</title>
+    <title>{% block title %}{{page.title}}{% endblock %}</title>
 {% block style %}
     <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "fontawesome/css/fontawesome-all.min.css" %}">
@@ -80,7 +80,7 @@
 <script>
     $(document).ready(function () {
         $('.sidebar-menu').tree()
-    })
+    });
 </script>
 {% endblock %}
 {% block extra-script %}{% endblock %}

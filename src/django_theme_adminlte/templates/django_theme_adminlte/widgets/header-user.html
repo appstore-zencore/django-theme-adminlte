@@ -5,13 +5,13 @@
 {% if request.user.pk %}
 <li class="dropdown user user-menu">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <img src="{% static "django_theme_adminlte/img/default-user.jpg" %}" class="user-image" alt="User Image">
+        <img src="{% static "django_theme_adminlte/img/default-user.jpg" %}" class="user-image">
         <span class="hidden-xs">{{request.user|nice_name}}</span>
     </a>
     <ul class="dropdown-menu">
         <!-- User image -->
         <li class="user-header">
-        <img src="{% static "django_theme_adminlte/img/default-user.jpg" %}" class="img-circle" alt="User Image">
+        <img src="{% static "django_theme_adminlte/img/default-user.jpg" %}" class="img-circle">
         <p>
             <small>{{request.user.username}}</small>
             <small>{{request.user.email}}</small>
